@@ -38,6 +38,7 @@ document.addEventListener("alpine:init", () => {
       json: [],
       html: "",
       state: state,
+      editor: editor,
       fullScreenMode: false,
       updatedAt: Date.now(),
       getExtensions() {

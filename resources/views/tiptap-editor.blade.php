@@ -79,8 +79,8 @@
                     <div x-show="buttons.includes('color')">
                             <input
                                 type="color"
-                                :input="tiptap().editor.chain().focus().setColor($event.target.value).run()"
-                                :value="tiptap().editor.getAttributes('textStyle').color"
+                                :input="editor.chain().focus().setColor($event.target.value).run()"
+                                :value="editor.getAttributes('textStyle').color"
                                 >
                     </div>
                     <div x-show="buttons.includes('bulletList')"
