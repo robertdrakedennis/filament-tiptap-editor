@@ -80,7 +80,7 @@
                             <input
                                 type="color"
                                 x-model="color"
-                                :input="Alpine.raw(editor).chain().focus().setColor(color).run()"
+                                :input="Alpine.raw(editor).chain().focus().setColor($event.target.value).run()"
                                 :value="Alpine.raw(editor).getAttributes('textStyle').color"
                                 >
                     </div>
