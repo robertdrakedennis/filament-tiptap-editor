@@ -25,6 +25,8 @@ import History from "@tiptap/extension-history";
 import Dropcursor from "@tiptap/extension-dropcursor";
 import Gapcursor from "@tiptap/extension-gapcursor";
 import { CheckedList, Lead } from "./extensions";
+import TextStyle from '@tiptap/extension-text-style'
+import { Color } from '@tiptap/extension-color'
 
 document.addEventListener("alpine:init", () => {
   Alpine.data("tiptap", ({ state, buttons = "", blocks = [] }) => {
@@ -84,6 +86,11 @@ document.addEventListener("alpine:init", () => {
           if (this.buttons.includes("h6")) levels.push(6);
           exts.push(Heading.configure({ levels }));
         }
+
+        if (this.buttons.includes("color")) {
+          exts.push(TextStyle)
+          exts.push(Color)
+        };
 
         return exts;
       },

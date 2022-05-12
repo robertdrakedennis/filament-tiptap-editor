@@ -76,6 +76,13 @@
                         style="display: none;">
                         <x-filament-tiptap-editor::buttons.lead />
                     </div>
+                    <div x-show="buttons.inlucdes('color')">
+                            <input
+                                type="color"
+                                :input="editor.chain().focus().setColor($event.target.value).run()"
+                                :value="editor.getAttributes('textStyle').color"
+                                >
+                    </div>
                     <div x-show="buttons.includes('bulletList')"
                         style="display: none;">
                         <x-filament-tiptap-editor::buttons.list />
