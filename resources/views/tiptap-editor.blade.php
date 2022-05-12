@@ -79,8 +79,9 @@
                     <div x-show="buttons.includes('color')">
                             <input
                                 type="color"
-                                :input="editor.chain().focus().setColor($event.target.value).run()"
-                                :value="editor.getAttributes('textStyle').color"
+                                x-model="color"
+                                :input="Alpine.raw(editor).chain().focus().setColor(color).run()"
+                                :value="Alpine.raw(editor).getAttributes('textStyle').color"
                                 >
                     </div>
                     <div x-show="buttons.includes('bulletList')"
