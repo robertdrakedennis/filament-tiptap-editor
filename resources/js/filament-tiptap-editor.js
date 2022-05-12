@@ -38,7 +38,7 @@ document.addEventListener("alpine:init", () => {
       json: [],
       html: "",
       state: state,
-      editor: editor,
+      editor: null,
       fullScreenMode: false,
       updatedAt: Date.now(),
       getExtensions() {
@@ -259,6 +259,8 @@ document.addEventListener("alpine:init", () => {
             _this.updatedAt = Date.now();
           },
         });
+
+        this.editor = editor;
       },
     };
   });
