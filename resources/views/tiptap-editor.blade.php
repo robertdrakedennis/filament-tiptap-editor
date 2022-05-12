@@ -76,7 +76,7 @@
                         style="display: none;">
                         <x-filament-tiptap-editor::buttons.lead />
                     </div>
-                    <div x-show="buttons.inlucdes('color')">
+                    <div x-show="buttons.includes('color')">
                             <input
                                 type="color"
                                 :input="editor.chain().focus().setColor($event.target.value).run()"
